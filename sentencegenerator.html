@@ -12,14 +12,16 @@ outputs the result to '<p id="output"><p>' innerHTML */
 let sentence = ""
 function generateSentence(){
     for(let row of words){
-    const sentence = row.join(' ') // .join adds something between each row element or array element
-    console.log(sentence)
+    sentence = row.join(' ') // .join adds something between each row element or array element
     }
+    document.getElementById("output").innerHTML = sentence;
 }
+document.getElementById("generateBtn").addEventListener("click", generateSentence);
+
 /* Add an event listener to generateBtn.
 When clicked, the generateBtn should execute 
 the generateSentence function, displaying the sentence. */
-document.addEventListener("click", generateSentence)
+
 </script>
 </body>
 </html>
